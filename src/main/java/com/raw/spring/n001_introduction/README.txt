@@ -55,4 +55,17 @@
                     with  construct
                     setters
                     'Autowiring'
+            ---------------------
+            DI with constructor:
+                <bean id = "myPet"
+                      class="com.raw.spring.n001_introduction.Dog">
+                </bean>
+
+                    * This equal === Cat myPet = new Cat();
+
+                <bean id = "myPerson"
+                      class="com.raw.spring.n001_introduction.Person">
+                    <constructor-arg ref="myPet"/><!-- Injection dependency. old xml way. -->
+                </bean>
+                    * This equal === Person myPerson = new Person(myPet);
 

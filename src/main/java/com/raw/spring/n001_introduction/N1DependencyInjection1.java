@@ -8,10 +8,13 @@ public class N1DependencyInjection1 {
 //        Pet pet = new Dog();
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        Pet pet = context.getBean("myPet", Pet.class);
+//        Pet pet = context.getBean("myPet", Pet.class);
 
         // old way add dependency (Hardcode dependency)
-        Person person = new Person(pet);
+//        Person person = new Person(pet);
+
+        // another old xml way
+        Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
         //
         context.close();
