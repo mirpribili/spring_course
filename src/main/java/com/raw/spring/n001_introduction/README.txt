@@ -34,7 +34,7 @@
                         new ClassPathXmlApplicationContext("applicationContext.xml");
                 Pet pet = context.getBean("myPet", Pet.class);
 
-    // Dependency Injection
+    // Dependency Injection (DI)
         //  Employee ->
                      -> Car,
                      -> House, ->
@@ -49,4 +49,10 @@
                 House house = new House();
                 Door door = new Door();
                     house.setDoor(door);
+        //  DI - аутсорсинг добавления\внедрения зависимостей.
+            DI -  делает объекты нашего прилож. слабо зависимыми друг от друга.
+                // Methods injection dependency:
+                    with  construct
+                    setters
+                    'Autowiring'
 
