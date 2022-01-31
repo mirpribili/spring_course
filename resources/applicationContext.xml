@@ -16,5 +16,7 @@
         <!-- <constructor-arg ref="myPet"/><!- - Injection dependency. old xml way. -->
         <property name="pet" ref="myPet"/> <!-- name="pet" == call set pet from class Person -->
         <!-- name="pet" -> Pet -> setPet  -->
+        <property name="surname" value="Smith"/>
+        <property name="age" value="33"/>
     </bean>
 </beans>

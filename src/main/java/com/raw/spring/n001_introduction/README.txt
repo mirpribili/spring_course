@@ -74,3 +74,11 @@
                       class="com.raw.spring.n001_introduction.Person">
                     <property name="pet" ref="myPet"/>
                 </bean>
+            ---------------------
+            DI - внедрение строк и других значений:
+                <bean id = "myPerson"
+                      class="com.raw.spring.n001_introduction.Person">
+                    <property name="pet" ref="myPet"/>
+                    <property name="surname" value="Smith"/>
+                    <property name="age" value="33"/>
+                </bean>

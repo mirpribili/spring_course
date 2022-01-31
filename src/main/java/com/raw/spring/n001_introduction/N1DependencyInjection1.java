@@ -16,6 +16,9 @@ public class N1DependencyInjection1 {
         // another old xml way
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+
+        System.out.println(person.getAge());
+        System.out.println(person.getSurname());
         //
         context.close();
     }
