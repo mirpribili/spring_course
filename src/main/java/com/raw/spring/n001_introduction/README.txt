@@ -68,4 +68,9 @@
                     <constructor-arg ref="myPet"/><!-- Injection dependency. old xml way. -->
                 </bean>
                     * This equal === Person myPerson = new Person(myPet);
-
+            ---------------------
+            DI with setter:
+                <bean id = "myPerson"
+                      class="com.raw.spring.n001_introduction.Person">
+                    <property name="pet" ref="myPet"/>
+                </bean>
