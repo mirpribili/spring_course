@@ -10,9 +10,9 @@ public class N2VarietyOfBeanScope {
         // давайте проверим утверждение
         ///  - является общим для всех, кто запросит его у Spring Container-а;
         Dog myDog = context.getBean("myPet", Dog.class);
-        myDog.setName("myDog");
+//        myDog.setName("myDog");
         Dog yourDog = context.getBean("myPet", Dog.class);
-        yourDog.setName("yourDog");
+//        yourDog.setName("yourDog");
         // будет ли это двумя ссылками на 1 объект
 
         System.out.println("Переменные ссылаются на один и тот же объект? " + (myDog == yourDog));

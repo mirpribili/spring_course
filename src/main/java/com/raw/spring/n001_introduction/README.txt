@@ -113,3 +113,33 @@
         - Такой бин создается только после обращения к Spring Container-у с помощью метода getBean;
         - Для каждого обращения создается новый бин в Spring Container-е;
         - подходит для stateful объектов. Наприм. хранящим состояние, как то имя собаки
+    // Жизненный цикл Bean + Methods init and destroy
+       - Запуск приложения;
+       - Начало работы Spring Container-а;
+       - Создание бина;
+       - DI - внедрение зависимостей;
+       - init-method; Открытие соединений и файлов;
+       - бин готов для использования;
+       - Использование нами этого бина;
+       - Конец работы Spring Container-а;
+       - destroy-method; закрытие файлов и соединений;
+       - остановка приложения;
+
+           <bean id = "myPet"
+               class="com.raw.spring.n001_introduction.Dog"
+               init-method="init"
+               destroy-method="destroy">
+           </bean>
+
+               public void init(){
+                   System.out.println("Class Dog: init method");
+               }
+               public void destroy(){
+                   System.out.println("Class Dog: destroy method");
+               }
+       Methods init and destroy
+       - access modifier - может быть любой даже private;
+       - return также может быть любой; Но возвращаемое значение мы не можем использовать поэтому чаще void;
+       - название методов может быть любым.
+       - не должно быть параметров!
+       - если у бина scope = prototype то init() вызван для КАДОГО бина, НО destroy() не вызовется!(пиши сам освобождение\закрытие реусрсов)
