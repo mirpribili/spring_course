@@ -12,8 +12,8 @@
 // Spring
     // Inversion of Control:
         //      Functions:
-        //          IoC - инверсия управления. Создание и управление объектами.
-        //          DI - Dependency Injection.
+        //          IoC - инверсия управления. Создание и управление объектами передается Spring-у.
+        //          DI - Dependency Injection. Делает объекты слабо зависимыми.
         // Example:
         // ----------------------------------
         //                _ Please give me object of Pet
@@ -82,3 +82,34 @@
                     <property name="surname" value="Smith"/>
                     <property name="age" value="33"/>
                 </bean>
+            ---------------------
+            DI - injection strings and another values from file: properties
+
+                <context:property-placeholder location="classpath:myApp.properties"/>
+                <bean id = "myPerson"
+                      class="com.raw.spring.n001_introduction.Person">
+                    <property name="pet" ref="myPet"/>
+                    <property name="surname" value="${person.surname}"/>
+                    <property name="age" value="${person.age}"/>
+                </bean>
+    ---------------------
+    // Bean scope - рамки ( область видимость)
+        - жизненный цикл Bean;
+        - возможное количество создаваемых Bean;
+
+        Variety of Bean scope:
+        - singleton;
+        - prototype;
+         - request;
+         - session;
+         - global-session;
+
+        Singleton - default scope;
+        - такой Bean создается сразу после прочтения Spring Container-ом конфиг файла;
+        - является общим для всех, кто запросит его у Spring Container-а;
+        - подходит для stateless объектов; Объектов состояние которых мы не хотим менять.
+
+        Prototype - scope;
+        - Такой бин создается только после обращения к Spring Container-у с помощью метода getBean;
+        - Для каждого обращения создается новый бин в Spring Container-е;
+        - подходит для stateful объектов. Наприм. хранящим состояние, как то имя собаки
