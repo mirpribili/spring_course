@@ -168,6 +168,11 @@
 #### @Autowired for field 
 - > This one leads to DI
 #### @Autowired, @Qualifier
-
+#### @Autowired, @Value
+- Для внедрения строк и других значений можно использовать аннотацию @Value;
+- для @Value  нет необходимости в сеттерах, как то при XML;
+#### @Scope, @PostConstruct, @PreDestruct
+- @PostConstruct == init method
+- @PreDestruct == destroy method
 
 

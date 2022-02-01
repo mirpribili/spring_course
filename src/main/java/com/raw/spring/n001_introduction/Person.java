@@ -2,6 +2,7 @@ package com.raw.spring.n001_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
@@ -9,7 +10,11 @@ public class Person {
 //    @Autowired
 //    @Qualifier("dog")
     private Pet pet;
+//    @Value("Smith")
+//    @Value("${person.surname}")
     private String surname;
+//    @Value("34") // But This is hardcode variant
+//    @Value("${person.age}")
     private int age;
 
     @Autowired
