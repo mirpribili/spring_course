@@ -174,5 +174,10 @@
 #### @Scope, @PostConstruct, @PreDestruct
 - @PostConstruct == init method
 - @PreDestruct == destroy method
+### Configuration Spring Container only with Java code. Part 1.
 
+    @Configuration
+    @ComponentScan("com.raw.spring.n001_introduction")
+    public class MyConfig{
+    }
 
