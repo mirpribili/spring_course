@@ -1,5 +1,10 @@
 package com.raw.spring.n001_introduction;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+// bean id == dog
 public class Dog  implements Pet{
 //    private String name;
 

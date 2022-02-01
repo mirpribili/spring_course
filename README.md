@@ -163,9 +163,11 @@
 - конструктор;
 - сеттер;
 - полек класса;
-### @Autowired for setters\anyMethodName (This one leads to DI)
-
-
+#### @Autowired for setters\anyMethodName 
+- > This one leads to DI
+#### @Autowired for field 
+- > This one leads to DI
+#### @Autowired, @Qualifier
 
 
 
