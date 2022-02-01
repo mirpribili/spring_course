@@ -181,3 +181,8 @@
     public class MyConfig{
     }
 
+### Configuration Spring Container only with Java code. Part 2.
+- Without scanning pockets;
+- Данный способ не использует аннотацию @Autowired. Те зависимости прописываются вручную;
+- Название метода это bean id;
+- Аннотация @Bean перехватывает все обращения к бин и регулирует создание;

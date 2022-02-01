@@ -7,6 +7,11 @@ public class N6bConfigurationSpringContainerWithJava {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(N6aMyConfig.class);
 
+//        Person person = context.getBean("personBean", Person.class);
+//        person.callYourPet();
+//        Pet cat = context.getBean("catBean", Pet.class);
+//        Pet cat2 = context.getBean("catBean", Pet.class);
+//        cat.say();
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+//@Component
 // bean id == dog
 //@Scope("prototype") // we don't have to write this. Because singleton = default Scope
 public class Dog  implements Pet{
