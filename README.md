@@ -8,6 +8,7 @@
 ###  Generics
 #### Type Safe & Reusable Code
 #### Parametrized Method and Class (method)
+#### Type erasure - стирание типов для обратной совместимости
 
 # Spring
 ## Inversion of Control:
