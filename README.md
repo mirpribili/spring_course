@@ -252,8 +252,18 @@
 - любой return type
 - любое название метода
 - любое количество принимаемых методом объектов
+#### Объявление Pointcut
+> @Pointcut("pointcut_expression")
+> 
+> private void pointcut_reference(){}
 
-
+> @Before("pointcut_reference()")
+> 
+> public void advice_name(){ some code }
+#### Плюсы: 
+- можно комбинировать Pointcut
+- объявить в одном месте
+- нет дублирования кода
 
 
 
