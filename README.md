@@ -222,9 +222,31 @@
     public void beforeGetBookAdvice(){
       Где "execution(public void getBook())" = называется Pointcut
 - В аспектно-ориентированном компьютерном программировании pointcut — это набор точек соединения. Pointcut указывает, где именно следует применять рекомендации, это позволяет разделить проблемы и помогает в модуляции бизнес-логики.
+#### Pointcut expression part 1
+> это выражение, опис. где должен быть применен Advice.
 
+> Spring AOP использует AspectJ Pointcut expression language.
+#### Шаблон для Pointcut:
+> **execution(** modifiers-pattern? **return-type-pattern** declaring-type-pattern? **method-name-pattern(parametrs-pattern)** throws-patter? **)**
+  - something? == опциональные параметры
+> Разберем шаблон:
+> 
+> @Before("execution(public void com.raw.spring.n002_aop.UniversityLibrary.getBook())")
+  - **execution(** -> "execution(
+  - modifiers-pattern? -> public 
+  - **return-type-pattern** -> void 
+  - declaring-type-pattern? -> com.raw.spring.n002_aop.UniversityLibrary.
+  - **method-name-pattern(parameters-pattern)** ->getBook())
+  - throws-patter? -> *None*
+> **execution(public void** get* ()) : 
+  - соответствует методу без параметров
+  - где бы он не находился
+  - access modifier = public
+  - return type = void
+  - и именем начинающимся с get*
+> **execution(** * * ()) :
 
-
+#### Pointcut expression part 2
 
 
 

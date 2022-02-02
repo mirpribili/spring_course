@@ -7,8 +7,13 @@ public class N1AdviceTypeBefore {
         //
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
-        Library library = context.getBean("libraryBean", Library.class);
-        library.getBook();
+        UniversityLibrary universityLibrary = context.getBean("universityLibrary", UniversityLibrary.class);
+        universityLibrary.getBook();
+        universityLibrary.getMagazine();
+        universityLibrary.returnBook();
+
+        SchoolLibrary schoolLibraryLibrary = context.getBean("schoolLibrary", SchoolLibrary.class);
+        schoolLibraryLibrary.getBook();
 
         context.close();
     }
