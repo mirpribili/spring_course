@@ -7,7 +7,7 @@
 * -> compare(Employee02 emp1, Employee02 emp2)
 ###  Generics
 #### Type Safe & Reusable Code
-
+#### Parametrized Method and Class (method)
 
 # Spring
 ## Inversion of Control:
