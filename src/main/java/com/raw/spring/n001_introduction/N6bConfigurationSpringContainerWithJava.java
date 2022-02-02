@@ -14,6 +14,8 @@ public class N6bConfigurationSpringContainerWithJava {
 //        cat.say();
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
+        System.out.println(person.getAge());
+        System.out.println(person.getSurname());
 
         context.close();
     }

@@ -11,10 +11,10 @@ public class Person {
 //    @Qualifier("dog")
     private Pet pet;
 //    @Value("Smith")
-//    @Value("${person.surname}")
+    @Value("${person.surname}")
     private String surname;
 //    @Value("34") // But This is hardcode variant
-//    @Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
 //    @Autowired
