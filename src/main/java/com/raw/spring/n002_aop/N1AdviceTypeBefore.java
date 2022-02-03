@@ -10,8 +10,8 @@ public class N1AdviceTypeBefore {
         UniversityLibrary universityLibrary = context.getBean("universityLibrary", UniversityLibrary.class);
         universityLibrary.getBook();
         universityLibrary.getMagazine();
-        universityLibrary.addBook("Les Miserables");
-        universityLibrary.returnMagazine();
+//        universityLibrary.addBook("Les Miserables");
+//        universityLibrary.returnMagazine();
 
 //        universityLibrary.returnBook();
 
