@@ -1,8 +1,11 @@
 package com.raw.spring.n002_aop.aspects;
 
+import com.raw.spring.n002_aop.Book;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -59,9 +62,31 @@ public class LoggingAspect {
 //    @Before("execution(public void com.raw.spring.n002_aop.UniversityLibrary.getBook())")
 //    @Before("execution(public void get* (com.raw.spring.n002_aop.Book))")
 
-    @Before("com.raw.spring.n002_aop.aspects.MyPointCuts.allGetMethods()")//===    @Before("execution(* get*())")
-    public void beforeGetLoginAdvice(){
-        System.out.println("[+] -> beforeGetLoginAdvice: Logging, attempts to get a book or magazine");
+    @Before("com.raw.spring.n002_aop.aspects.MyPointCuts.allAddMethods()")//===    @Before("execution(* get*())")
+    public void beforeAddLoginAdvice(JoinPoint joinPoint){
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+        Object[] arguments = joinPoint.getArgs();
+
+        System.out.println("\tmethodSignature = " + methodSignature);
+        System.out.println("\tmethodSignature.getMethod() = " + methodSignature.getMethod());
+        System.out.println("\tmethodSignature.getReturnType() = " + methodSignature.getReturnType());
+        System.out.println("\tmethodSignature.getName() = " + methodSignature.getName());
+
+        if(methodSignature.getName().equals("addBook")){
+            Object[] argument = joinPoint.getArgs();
+            for (Object obj:arguments){
+                if (obj instanceof Book){
+                    Book myBook = (Book) obj;
+                    System.out.println("\t\tInfo about book: name - " + myBook.getName() +
+                            " years publication: " + myBook.getYearOfPublication() +
+                            " author: " + myBook.getAuthor());
+                }else if(obj instanceof String){
+                    System.out.println("\t\tКто добавляет книгу в библиотеку:" + obj);
+                }
+            }
+        }
+
+        System.out.println("[+] -> beforeAddLoginAdvice: Logging, attempts to get a book or magazine");
     }
 
 //

@@ -10,6 +10,14 @@ public class N1AdviceTypeBefore {
         UniversityLibrary universityLibrary = context.getBean("universityLibrary", UniversityLibrary.class);
         universityLibrary.getBook();
         universityLibrary.getMagazine();
+
+        Book book = context.getBean("book", Book.class);
+        System.out.println(book.getName());
+
+        universityLibrary.addBook("book", book);
+        universityLibrary.addMagazine();
+
+
 //        universityLibrary.addBook("Les Miserables");
 //        universityLibrary.returnMagazine();
 
@@ -17,8 +25,6 @@ public class N1AdviceTypeBefore {
 
 //        universityLibrary.getArticle("new article");
 
-//        Book book = context.getBean("book", Book.class);
-//        System.out.println(book.getName());
 
 //        universityLibrary.getBookByName(book);
 
