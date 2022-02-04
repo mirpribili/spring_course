@@ -292,6 +292,14 @@
     Student firstStudent = students.get(0);
 ### Advice @AfterThrowing
 - Выполняется после выбрасывания исключения.
+### Advice @After (this like finally) 
+- выполняется после окончания метода с основной логикой, НЕЗАВИСИМО было или нет исключение брошено
+- НЕЛЬЗЯ получить доступ к исключению
+- НЕЛЬЗЯ изменить возвращаемое значение
+#### 
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLoggingAdvice(){
+
 =
 
 =

@@ -32,8 +32,12 @@ public class UniversityLoggingAspect {
 //        System.out.println("[a] -> afterReturningGetStudentsLoggingAdvice. We are logging getting list of students AFTER method getStudents");
 //    }
 
-    @AfterThrowing(pointcut = "execution(* getStudents())", throwing = "exception")
-    public void afterThrowingGetStudentsLoggingAdvice(Throwable exception){
-        System.out.println("[t] -> afterThrowingGetStudentsLoggingAdvice: Logging throwing exception" + exception);
+//    @AfterThrowing(pointcut = "execution(* getStudents())", throwing = "exception")
+//    public void afterThrowingGetStudentsLoggingAdvice(Throwable exception){
+//        System.out.println("[t] -> afterThrowingGetStudentsLoggingAdvice: Logging throwing exception" + exception);
+//    }
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLoggingAdvice(){
+        System.out.println("[a] -> afterGetStudentsLoggingAdvice: Logging a normal shutdown method or an exception");
     }
 }
