@@ -299,7 +299,30 @@
 #### 
     @After("execution(* getStudents())")
     public void afterGetStudentsLoggingAdvice(){
+### Advice type @Around part 1
+**ПОЗВОЛЯЕТ ВСЕ**
+- произвести действия **ДО** target method
+- произвести действия **ПОСЛЕ** target method
+- **получить** результаты метода и **изменить их**
+- обработать исключение
+####
+    @Around("execution(public String returnBook())")
+    public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint)
+        throws Throwable {
+        // proceedingJoinPoint -> наша связь с target method
+        System.out.println("[ar]-> aroundReturnBookLoggingAdvice. In the library trying to return a book");
 
+        Long begin = System.currentTimeMillis();
+        Object targetMethodResult = proceedingJoinPoint.proceed();
+        Long end = System.currentTimeMillis();
+        System.out.println(end - begin + "ms");
+
+        targetMethodResult = "Hacked with @Around";
+
+        System.out.println("[ar]-> aroundReturnBookLoggingAdvice. In library returned the book");
+        return targetMethodResult;
+    }
+### Advice type @Around part 2
 =
 
 =

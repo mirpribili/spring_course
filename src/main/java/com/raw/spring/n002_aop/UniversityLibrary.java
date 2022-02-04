@@ -19,7 +19,7 @@ public class UniversityLibrary extends AbstractLibrary{
     public String returnBook(){
         System.out.println("We are returning the book to the university library");
         System.out.println("----------------------------------------------------------");
-        return "return";
+        return "War and Peace";
     }
     public void addBook(String person_name, Book book){
         System.out.println("We add the book to the UniversityLibrary");
