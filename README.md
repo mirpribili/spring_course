@@ -269,19 +269,27 @@
 - объединение с помощью лог. операторов &&, ||, !; 
 #### Порядок выполнения Aspect-ов
 - для соблюдения порядка необходимо размещать Advice в разные Aspects
-- также необходима анотация @Order(10) чем меньше число тем выше приоритет
+- также необходима аннотация @Order(10) чем меньше число тем выше приоритет
 #### Joint Point - точка наблюдения или соединения
 - тут это точка\момент в прогр. когда следует применять Advice.
 - те. это точка переплетения бизнес-логики и служеб. функц-лом. 
 - Joint Point в параметре метода Advice дает доступ к сигнатуре и параметрах метода с бизнес-логикой.
->
+####
     @Before("com.raw.spring.n002_aop.aspects.MyPointCuts.allAddMethods()")
     public void beforeAddLoginAdvice(JoinPoint joinPoint){
     MethodSignature methodSignature = (MethodSignature) 
                                         joinPoint.getSignature();
     Object[] arguments = joinPoint.getArgs();
-
-
+### Advice @AfterReturning
+- выполняется только после нормального окончания метода с основной логикой
+- идеален для логирования
+- ПОЗВОЛЯЕТ ИЗМЕНЯТЬ ВОЗВРАЩАЕМОЕ ЗАНЧАЕНИЕ МЕТОДА
+####
+    @AfterReturning(pointcut = "execution(* getStudents())", returning = "students")
+    public void afterReturningGetStudentsLoggingAdvice(
+      JoinPoint joinPoint,
+      List<Student> students){
+    Student firstStudent = students.get(0);
 
 =
 
