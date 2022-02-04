@@ -21,13 +21,18 @@ public class NewLoggingAspect {
             throws Throwable {
         // proceedingJoinPoint -> наша связь с target method
         System.out.println("[ar]-> aroundReturnBookLoggingAdvice. In the library trying to return a book");
+        Object targetMethodResult = null;
 
-        Long begin = System.currentTimeMillis();
-        Object targetMethodResult = proceedingJoinPoint.proceed();
-        Long end = System.currentTimeMillis();
-        System.out.println(end - begin + "ms");
-
-        targetMethodResult = "Hacked with @Around";
+        try {
+            Long begin = System.currentTimeMillis();
+            targetMethodResult = proceedingJoinPoint.proceed();
+            Long end = System.currentTimeMillis();
+            System.out.println(end - begin + "ms");
+        }catch (Exception e){
+            System.out.println("aroundReturnBookLoggingAdvice: We catch exception: " + e);
+            throw e;
+            //targetMethodResult = "Hacked with @Around: Неизвестное название книги";
+        }
 
         System.out.println("[ar]-> aroundReturnBookLoggingAdvice. In library returned the book");
         return targetMethodResult;
