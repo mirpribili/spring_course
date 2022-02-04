@@ -290,7 +290,8 @@
       JoinPoint joinPoint,
       List<Student> students){
     Student firstStudent = students.get(0);
-
+### Advice @AfterThrowing
+- Выполняется после выбрасывания исключения.
 =
 
 =

@@ -10,8 +10,13 @@ public class N2AdviceAfterReturning {
                 new AnnotationConfigApplicationContext(MyConfig.class);
         University university = context.getBean("university", University.class);
         university.addStudents();
-        List<Student> students = university.getStudents();
-        System.out.println(students);
+        try {
+            List<Student> students = university.getStudents();
+            System.out.println(students);
+        }catch (Exception e){
+            System.out.println("Было поймано исключение: " + e);
+        }
+
         // А теперь поменяем массив студентов на фрукты? О_о
 
 

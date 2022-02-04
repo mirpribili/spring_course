@@ -19,7 +19,9 @@ public class University {
         students.add(student3);
     }
     public List<Student> getStudents(){
+        System.out.println("Start work method getStudents");
         System.out.println("Information from method getStudents: ");
+        System.out.println(students.get(3));
         System.out.println(students);
         return students;
     }
