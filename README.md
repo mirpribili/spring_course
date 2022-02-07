@@ -374,9 +374,27 @@
 > user: bestuser
 > pwd: bestuser
 > DB: my_db
-
->
-=
+### Hibernate settings
+- xml
+- java annotation
+### Hibernate концепция
+- Entity class - это java класс, который отображает инф-ю определенной таблицы в БД.
+- Entity class - это POJO класс, в котором мы используем определенные Hibernate аннотации для связи класса с теблицей в БД.
+- POJO (Plain\простой Old Java Objects) класс удов. ряду условий:
+  - private поля
+  - getters
+  - setters
+  - construct без аргументов
+  - ...
+> JPA (Java Persistence API) спецификация описывает систему управления сохранения Java объектов ДБ
+> 
+> Hibernate - реализация JPA (реализует то что описано в JPA)
+> 
+> import javax.persistence.Column;
+> 
+> import javax.persistence.Entity; /// !!!
+> 
+> **Поэтому используем javax.persistence**
 
 =
 
