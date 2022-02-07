@@ -329,7 +329,53 @@
 - пробрасывать
 =
 # Hibernate
-- ORM (Object-to-Relational Mapping) - прелбразование объекта в строку в таблице и обратно
+- ORM (Object-to-Relational Mapping) - преобразование объекта в строку в таблице и обратно
+- **save**
+  - Собирает данные из полей объекта;
+  - Написание INSERT выражений для добавления новой строки в таблицу с собранными данными.
+- **get**
+  - Написание SELECT выражения для получения необходимых данных.
+  - Создание объектов Java класса и присвоения его полям значений, получ. из базы.
+- **Плюсы**
+  - предоставляет технологию ORM
+  - регулирует SQL запросы
+  - уменьшает кол-во кода для написания по сравнению JDBC (java data base connectivity)
+- **CRUD**
+  - create = insert
+  - read = select
+  - update = update
+  - delete = delete
+#### Install mysql
+- sudo apt update
+- sudo apt install mysql-server
+- mysql --version
+- sudo systemctl status mysql
+- sudo mysql_secure_installation
+- sudo mysql
+  - CREATE USER bestuser@'localhost' IDENTIFIED BY 'bestuser';
+  - GRANT ALL PRIVILEGES ON *. * TO bestuser@'localhost';
+    - FLUSH PRIVILEGES;
+  - **exit**
+  - **mysql -u bestuser -p bestuser**
+  - CREATE DATABASE my_db;
+    - USE my_db;
+    - CREATE TABLE employees (
+    - id int NOT NULL AUTO_INCREMENT,
+    - name varchar(15),
+    - surname varchar(25),
+    - department varchar(20),
+    - salary int,
+    - PRIMARY KEY (id)
+    - );
+  - **show databases;**
+  - **SELECT * from my_db.employees;**
+> Root pwd: springcourse
+> connection: my_connection
+> user: bestuser
+> pwd: bestuser
+> DB: my_db
+
+>
 =
 
 =
