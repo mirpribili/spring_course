@@ -426,6 +426,8 @@
 - для получения объектов из БД используются HQL (Hibernate Query Language). HQL очень схож c SQL
 - **см N6HibernateGetAllEmployees**
 ### Hibernate update
+- см commit
+### Hibernate del
 =
 
 =
