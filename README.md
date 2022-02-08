@@ -350,6 +350,11 @@
 - sudo apt install mysql-server
 - mysql --version
 - sudo systemctl status mysql
+  - sudo service mysql stop
+  - sudo rm /var/lib/mysql/ib_logfile0
+  - sudo rm /var/lib/mysql/ib_logfile1
+  - *and comment out the line record_buffer=64M in /etc/mysql/my.cnf [1]*
+  - sudo service mysql restart
 - sudo mysql_secure_installation
 - sudo mysql
   - CREATE USER bestuser@'localhost' IDENTIFIED BY 'bestuser';
@@ -374,6 +379,13 @@
 > user: bestuser
 > pwd: bestuser
 > DB: my_db
+- sudo systemctl status mysql
+- mysql -u bestuser -p
+- sudo service mysql restart
+- exit
+- show databases;
+- SELECT * from my_db.employees;
+> 
 ### Hibernate settings
 - xml
 - java annotation
@@ -395,6 +407,15 @@
 > import javax.persistence.Entity; /// !!!
 > 
 > **Поэтому используем javax.persistence**
+### Hibernate save
+#### SessionFactory - фабрика по производству сессий.
+- читает hibernate.cfg.xml - как должны создаваться сессии.
+- В Java приложении достаточно создать объект SF 1раз и затем можно переиспользовать.
+#### Session
+- Session это обертка вокруг подключения к базе с помощью JDBC
+- Session мы получаем с помощью SessionFactory
+- Session - основа для работы с БД. Именно с помощью добавляют, получают и делают другие операции с Jva объектами в БД.
+- 
 
 =
 
