@@ -421,11 +421,11 @@
   - GenerationType.IDENTITY - полагается на автоматическое увеличение столбца по правилам, прописанным в БД
   - GenerationType.SEQUENCE - последовательность (нет в MySQL)
   - GenerationType.TABLE - полагается на значение столбца таблицы БД. Цель таблицы поддержка уникальности значений. (Устар)
-  - GenerationType.AUTO - зависит от типа БД. (не надежно)
+  - GenerationType.AUTO - зависит от типа БД. (ненадежно)
 #### Получение объекта из БД по ID
-- для получения объектов из БД используюется HQL (Hibernate Query Language). HQL очень схож c SQL
+- для получения объектов из БД используются HQL (Hibernate Query Language). HQL очень схож c SQL
 - **см N6HibernateGetAllEmployees**
-- 
+### Hibernate update
 =
 
 =

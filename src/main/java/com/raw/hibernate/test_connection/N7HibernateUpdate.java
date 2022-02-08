@@ -5,8 +5,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
 
-public class N4HibernateSaveToDB {
+
+public class N7HibernateUpdate {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -15,19 +17,20 @@ public class N4HibernateSaveToDB {
 
         Session session = factory.getCurrentSession();
         try {
-            //Employee employee = new Employee("Johnny", "Depp", "IT", 500);
-//            Employee employee = new Employee("lex", "Luthor", "HR", 1000);
-            Employee employee = new Employee("lex", "Lutor", "Engineer", 123000);
             session.beginTransaction();
-            session.save(employee); // = INSERT
-            session.getTransaction().commit();
 
-            System.out.println("Done!");
-            System.out.println(employee);
+//            Employee employee = session.get(Employee.class, 6);
+//            employee.setSalary(1001);
+//            employee.setSurname("Depp");
+            session.createQuery("update Employee set salary=100500 where firstName = 'lex'").executeUpdate();
+
+
+
+            session.getTransaction().commit();
         }finally {
             factory.close();
             session.close();
         }
-
+        System.out.println("Done!");
     }
 }
