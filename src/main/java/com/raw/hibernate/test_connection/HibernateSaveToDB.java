@@ -15,10 +15,14 @@ public class HibernateSaveToDB {
 
         Session session = factory.getCurrentSession();
         try {
-            Employee employee = new Employee("Johnny", "Depp", "IT", 500);
+            //Employee employee = new Employee("Johnny", "Depp", "IT", 500);
+            Employee employee = new Employee("lex", "Luthor", "HR", 1000);
             session.beginTransaction();
             session.save(employee); // = INSERT
             session.getTransaction().commit();
+
+            System.out.println("Done!");
+            System.out.println(employee);
         }finally {
             factory.close();
             session.close();
