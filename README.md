@@ -477,8 +477,10 @@
 ### @OneToOne 
 - аннотация @OneToOne указывает на отношения между объектами
 - @JoinColumn - на столбец который осуществляет связь с другим объектом.
-- Cascade - операции которые выполняются не только там где вызывается (на неком Entity), но и на связанных с ними Entity. 
-=
+- Cascade - операции которые выполняются не только там где вызывается (на неком Entity), но и на связанных с ними Entity.
+#### @OneToOne Bi-directional
+- @OneToOne(mappedBy = "empDetail", cascade = CascadeType.ALL) // связь уже описана, ищи ее в empDetail
+- В Bi-directional отношениях с помощью аннотаций @OneToOne и mappedBy мы показываем Hibernate, где искать связь между классами.
 
 =
 

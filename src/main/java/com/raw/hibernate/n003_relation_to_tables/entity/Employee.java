@@ -28,6 +28,7 @@ public class Employee {
     @JoinColumn(name = "details_id")
     private Detail empDetail;
 
+
     public Employee(){}
 
     public Employee(String name, String surname, String department, int salary) {
