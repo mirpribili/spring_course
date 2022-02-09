@@ -373,7 +373,8 @@
     - PRIMARY KEY (id)
     - );
   - **show databases;**
-  - **SELECT * from my_db.employees;**
+  - **SELECT * from my_db2.employees;**
+  - **SELECT * from my_db2.details;**
 > Root pwd: springcourse
 > connection: my_connection
 > user: bestuser
@@ -385,6 +386,8 @@
 - exit
 - show databases;
 - SELECT * from my_db.employees;
+- use my_db2;
+- show tables;
 > 
 ### Hibernate settings
 - xml
@@ -444,8 +447,37 @@
   - исп. для связей между двумя таблицами
   - обычно FK это столбец, который ссылается на PK другой таблицы.
   - **FK столбец не может содержать инф. которой нет в столбце, на который он ссылается**
-=
+### One-to-One
+- school <--> Director
+- Uni and Bi-directional associations.
+  - Uni-directional => class Parent { Child child; } class Child {}
+    - > это отношения когда одна сторона о них не знает
+    - uni-directional = однонаправленные 
+  - Bi-directional => class Parent { Child child; } class Child { Parent parent; }
+    - > отношения о которых знают оба. Те оба объекта имеют ссылки друг на друга.
+#### new database
+    CREATE DATABASE my_db2;
+    USE my_db2;
 
+    CREATE TABLE my_db2.details (
+      id int NOT NULL AUTO_INCREMENT,
+      city varchar(15),
+      phone_number varchar(25),
+      email varchar(30), PRIMARY KEY (id)
+    );
+    
+    CREATE TABLE my_db2.employees (
+      id int NOT NULL AUTO_INCREMENT,
+      name varchar(15),
+      surname varchar(25),
+      department varchar(20), salary int, details_id int
+      ,  PRIMARY KEY (id)
+      , FOREIGN KEY (details_id) REFERENCES my_db2.details(id)
+    );
+### @OneToOne 
+- аннотация @OneToOne указывает на отношения между объектами
+- @JoinColumn - на столбец который осуществляет связь с другим объектом.
+- Cascade - операции которые выполняются не только там где вызывается (на неком Entity), но и на связанных с ними Entity. 
 =
 
 =
