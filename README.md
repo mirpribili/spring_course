@@ -375,6 +375,8 @@
   - **show databases;**
   - **SELECT * from my_db2.employees;**
   - **SELECT * from my_db2.details;**
+  - **SELECT * from my_db_one_to_many.employees;**
+  - **SELECT * from my_db_one_to_many.departments;**
 > Root pwd: springcourse
 > connection: my_connection
 > user: bestuser
@@ -481,6 +483,28 @@
 #### @OneToOne Bi-directional
 - @OneToOne(mappedBy = "empDetail", cascade = CascadeType.ALL) // связь уже описана, ищи ее в empDetail
 - В Bi-directional отношениях с помощью аннотаций @OneToOne и mappedBy мы показываем Hibernate, где искать связь между классами.
+#### @OneToMany Uni-directional
+- DB.employees.department_id(INT) --> DB.departments.id(int)
+#### @OneToMany Bi-directional
+    CREATE DATABASE my_db_one_to_many;
+    USE my_db_one_to_many;
+
+    CREATE TABLE my_db_one_to_many.departments (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(15),
+    max_salary int,
+    min_salary int,
+    PRIMARY KEY (id)
+    );
+    
+    CREATE TABLE my_db_one_to_many.employees (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(15),
+    surname varchar(25),
+    salary int,
+    department_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (department_id) REFERENCES my_db_one_to_many.departments(id));
 
 =
 

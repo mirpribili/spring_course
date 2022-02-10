@@ -1,4 +1,4 @@
-package com.raw.hibernate.n003_relation_to_tables.entity;
+package com.raw.hibernate.n003_relation_to_tables__one_to_one.entity;
 
 import javax.persistence.*;
 
