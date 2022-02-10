@@ -516,6 +516,37 @@
 - Many-to-One ----> EAGER
 - Many-to-Many ----> LAZY
 > для EAGER можно получить данные даже после commit() !!
+### Many-to-Many
+- Задача посторить свзяь для модели: 
+  - Ребенок1.. РебенокN <--> Кружок1.. КружокN
+#### Join Table - таблица, которая отображает связь между строками 2-х таблиц.
+- Cтолбцы: Join Table - Foreign Key, которые ссылаются на Primary Key связываемых таблиц.
+> New tables:
+
+    CREATE TABLE my_db.children (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(15),
+    age int,
+    PRIMARY KEY (id)
+    );
+    
+    CREATE TABLE my_db.section (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(15),
+    PRIMARY KEY (id)
+    );
+    
+    CREATE TABLE my_db.child_section (
+    child_id int NOT NULL,
+    section_id int NOT NULL,
+    PRIMARY KEY (child_id, section_id),
+    FOREIGN KEY (child_id) REFERENCES my_db.children(id),
+    FOREIGN KEY (section_id) REFERENCES my_db.section(id));
+- В аннотации @JoinTable
+  - Мы прописываем название таблицы, которая выполняет роль Join Table
+  - в **joinColumns** мы указываем столбец таблицы Join Table, который ссылается на **Primary Key source** таблицы
+  - в **inverseJoinColumns** мы указываем столбец таблицы join Table, который ссылается на **Primary Key target**
+  - 
 =
 
 =
