@@ -507,6 +507,15 @@
     FOREIGN KEY (department_id) REFERENCES my_db_one_to_many.departments(id));
 #### @OneToMany Uni-directional
 - только объект Департамент имеет ссылки на работников
+#### Loading Types: eager and lazy
+- Eager load - нетерпеливая загрузка. При ее использовании связанные сущности загружаются сразу с основной.
+- Lazy load - ленивая загрузка. Связанные сущности загружаются только при первом обращении к ним!
+#### Default relations:
+- One-to-One ----> default relation = EAGER
+- One-to_Many ----> LAZY
+- Many-to-One ----> EAGER
+- Many-to-Many ----> LAZY
+> для EAGER можно получить данные даже после commit() !!
 =
 
 =
