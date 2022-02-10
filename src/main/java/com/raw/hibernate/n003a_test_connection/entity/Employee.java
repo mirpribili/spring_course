@@ -1,4 +1,4 @@
-package com.raw.hibernate.test_connection.entity;
+package com.raw.hibernate.n003a_test_connection.entity;
 
 import javax.persistence.*;
 

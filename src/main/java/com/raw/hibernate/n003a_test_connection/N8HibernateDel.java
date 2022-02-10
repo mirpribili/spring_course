@@ -1,6 +1,6 @@
-package com.raw.hibernate.test_connection;
+package com.raw.hibernate.n003a_test_connection;
 
-import com.raw.hibernate.test_connection.entity.Employee;
+import com.raw.hibernate.n003a_test_connection.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -1,7 +1,7 @@
-package com.raw.hibernate.n003_relation_to_tables__one_to_one;
+package com.raw.hibernate.n003b_relation_to_tables__one_to_one;
 
-import com.raw.hibernate.n003_relation_to_tables__one_to_one.entity.Detail;
-import com.raw.hibernate.n003_relation_to_tables__one_to_one.entity.Employee;
+import com.raw.hibernate.n003b_relation_to_tables__one_to_one.entity.Detail;
+import com.raw.hibernate.n003b_relation_to_tables__one_to_one.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

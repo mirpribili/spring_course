@@ -505,7 +505,8 @@
     department_id int,
     PRIMARY KEY (id),
     FOREIGN KEY (department_id) REFERENCES my_db_one_to_many.departments(id));
-
+#### @OneToMany Uni-directional
+- только объект Департамент имеет ссылки на работников
 =
 
 =
