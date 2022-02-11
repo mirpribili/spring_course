@@ -18,7 +18,9 @@ public class Child {
     @Column(name = "age")
     private int age;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = // CascadeType.ALL) опять из-за этой стратегии удаление 1й секции
+            // приведет к удалению участников ДРУГИХ секций (
+    {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE})
     @JoinTable(name = "child_section",
             joinColumns = @JoinColumn(name = "child_id"),
             inverseJoinColumns = @JoinColumn(name = "section_id"))

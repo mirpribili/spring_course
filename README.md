@@ -546,7 +546,9 @@
   - Мы прописываем название таблицы, которая выполняет роль Join Table
   - в **joinColumns** мы указываем столбец таблицы Join Table, который ссылается на **Primary Key source** таблицы
   - в **inverseJoinColumns** мы указываем столбец таблицы join Table, который ссылается на **Primary Key target**
-  - 
+#### Different CascadeType.PERSIST and CascadeType.SAVE_UPDATE from hibernate 
+- Use session.save for CascadeType.All
+- Use session.persist for Cascade.{PERSIST,MERGE,DETACH,REFRESH}
 =
 
 =

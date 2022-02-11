@@ -44,6 +44,7 @@ public class N14ManyToMany {
 //            child.addSectionToChild(section2);
 //
 //            session.save(child);
+//            session.persist(child); /// !!!!!!!!!!!!!!!!!!!!!!
 //
 //            session.getTransaction().commit();
             //-----------------------------------
