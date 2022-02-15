@@ -21,7 +21,12 @@
     - Queue
     - Set
 - Map
-
+### ArrayList
+- ArrayList - способен изменять свою длину
+- ArrayList <DataType> list = new ArrayList <DataType>();
+- в основе лежит класс Object
+- имеет initialCapacity позволяющий сократить затрачиваемое время на пересоздание массивов при добавлении элементов.
+- по умолчанию initialCapacity = 10
 
 # Spring
 ## Inversion of Control:
