@@ -6,9 +6,22 @@
 ### Interface Comparator for not nature order
 * -> compare(Employee02 emp1, Employee02 emp2)
 ###  Generics
-#### Type Safe & Reusable Code
+### Type Safe & Reusable Code
 #### Parametrized Method and Class (method)
 #### Type erasure - стирание типов для обратной совместимости
+# Collections
+## Иерархия
+- Iterable
+  - Collection
+    - List - упорядоченная последовательность элементов, позволяющая хранить дубликаты и null. Каждый элемент имеет индекс.
+      - ArrayList
+      - LinkedList
+      - Vector
+        - Stack
+    - Queue
+    - Set
+- Map
+
 
 # Spring
 ## Inversion of Control:
