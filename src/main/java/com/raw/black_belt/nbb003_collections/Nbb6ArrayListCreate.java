@@ -3,7 +3,7 @@ package com.raw.black_belt.nbb003_collections;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Nbb6ArrayListExample1 {
+public class Nbb6ArrayListCreate {
     public static void main(String[] args) {
         // first type of create
         ArrayList<String> arrayList1 = new ArrayList<String>();

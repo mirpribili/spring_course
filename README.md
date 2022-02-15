@@ -27,7 +27,14 @@
 - в основе лежит класс Object
 - имеет initialCapacity позволяющий сократить затрачиваемое время на пересоздание массивов при добавлении элементов.
 - по умолчанию initialCapacity = 10
-
+### ArrayList Methods
+- add(DataType element) -----------------> boolean
+- add(int index, DataType element) ------> boolean
+- get(int index) ------------------------> DataType
+- set(int index, DataType element) ------> DataType (like REPLACE)
+- remove(Object element) ----------------> boolean
+- remove(int index) ---------------------> DataType
+- 
 # Spring
 ## Inversion of Control:
 ###      Functions:
