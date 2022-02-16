@@ -68,6 +68,8 @@
 - Плюсы: операции добавл.\удал. элем. быстрые
 - Минусы: получение элемента по индексу медленное.
 ### ListIterator
+- hasPrevious() + previous()
+- hasNext() + next()
 
 # Spring
 ## Inversion of Control:
