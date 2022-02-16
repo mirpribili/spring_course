@@ -43,6 +43,19 @@
 - isEmpty() -----------------------------> boolean
 - contains(Object element) --------------> boolean (work with equals)
 - toString() ----------------------------> String
+- .
+- Arrays.asList(DataType []) ------------> List<DataType> (новый лист СВЯЗАН с массивом!)
+- removeAll(Collection <?> c) -----------> boolean (arrayList1.removeAll(arrayList2))
+- retainAll(Collection <?> c) -----------> boolean (оставит в мас1 **только** элем. мас2)
+- containsAll(Collection <?> c) ---------> boolean содержит или нет все элементы передан. в парам-ре.
+- subList(int fromIndex, in toIndex) ----> List<E> (СВЯЗАН + ОГРАНИЧИВАЕТ структурные изменения масс. - это не отдельная сущность View)
+- toArray() -----------------------------> Object[]
+- toArray(new String[n]) ----------------> String[]
+- toArray(T [] a) -----------------------> T []
+- >Java8
+- List.of(E.. elements) -----------------> List<E> (неизменяемые)
+- List.copyOf(Collection <E> c) ---------> List<E> (неизменяемые)
+- 
 # Spring
 ## Inversion of Control:
 ###      Functions:
