@@ -34,7 +34,15 @@
 - set(int index, DataType element) ------> DataType (like REPLACE)
 - remove(Object element) ----------------> boolean
 - remove(int index) ---------------------> DataType
-- 
+- addAll(ArrayList aL) ------------------> boolean (в конец)
+- addAll(int index, ArrayList aL) -------> boolean 
+- clear() -------------------------------> void
+- indexOf(Object element) ---------------> int (-1 если нет, первое вхождение)
+- lastIndexOf(Object element) -----------> int (последний индекс)
+- size() --------------------------------> int (размер)
+- isEmpty() -----------------------------> boolean
+- contains(Object element) --------------> boolean (work with equals)
+- toString() ----------------------------> String
 # Spring
 ## Inversion of Control:
 ###      Functions:
