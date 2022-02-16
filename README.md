@@ -70,6 +70,10 @@
 ### ListIterator
 - hasPrevious() + previous()
 - hasNext() + next()
+### Binary search
+- для 80 000 элементов максимум 16 шагов потребуется
+- 
+
 
 # Spring
 ## Inversion of Control:
