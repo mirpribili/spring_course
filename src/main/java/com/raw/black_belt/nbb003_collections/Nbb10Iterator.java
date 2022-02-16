@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Nbb10Iterator {
     public static void main(String[] args) {
-        ArrayList<String> arrayList1 = new ArrayList<String>();
+        ArrayList<String> arrayList1 = new ArrayList<>();
         arrayList1.add("Zaur");
         arrayList1.add("Mary");
         arrayList1.add("Zaur2");

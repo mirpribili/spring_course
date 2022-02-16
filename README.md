@@ -56,8 +56,10 @@
 - List.of(E.. elements) -----------------> List<E> (неизменяемые)
 - List.copyOf(Collection <E> c) ---------> List<E> (неизменяемые)
 #### Iterator
-
-
+- arrayList1.iterator()
+- .hasNext()
+- .remove()
+#### 
 
 # Spring
 ## Inversion of Control:
