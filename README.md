@@ -76,6 +76,15 @@
 - O(n) - линейный
 - O(1) - самый быстрый
 - O(logN) - лучше чем O(n)
+### Vector (older)
+- не synchronized класс, устаревший и непригодный для многопоточности.
+- в основе массив Object
+- add()
+- get()
+- remove()
+- firstElement()
+- lastElement()
+
 
 
 # Spring
