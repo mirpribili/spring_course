@@ -55,7 +55,10 @@
 - >Java8
 - List.of(E.. elements) -----------------> List<E> (неизменяемые)
 - List.copyOf(Collection <E> c) ---------> List<E> (неизменяемые)
-- 
+#### Iterator
+
+
+
 # Spring
 ## Inversion of Control:
 ###      Functions:
