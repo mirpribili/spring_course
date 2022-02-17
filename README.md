@@ -114,14 +114,17 @@
 - containsKey() ---------------------------> boolean
 - keySet() --------------------------------> Set[]
 - values() --------------------------------> Array[]
-- entrySet() ------------------------------>
+- entrySet() ------------------------------> Returns a Set view of the mappings contained in this map.
 #### hashcode() equals()
 - equals()
 - hashcode()
 - **если переопределили equals() то переопределите hashcode()**
 - Для хэш коллекций сравнение элементов массива также **сначала** идет по хэш методу
 - коллизии неизбежны)
-- 
+### HashMap details part 1
+- в основе HashMap лежит массив. Элементами данного массива являются структуры LinkedList.
+- Данные структуры LinkedList и заполняются элементами которые мы добавляем в HashMap
+### HashMap details part 2
 
 # Spring
 ## Inversion of Control:

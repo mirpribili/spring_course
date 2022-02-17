@@ -22,6 +22,10 @@ public class Nbb17HashCode {
         Student student5 = new Student("Red", "Earl", 1);
 
         System.out.println(studentMap.containsKey(student5));
+
+        for(Map.Entry<Student, Double> entry: studentMap.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 }
 class Student{
