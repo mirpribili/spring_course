@@ -11,6 +11,7 @@
 #### Type erasure - стирание типов для обратной совместимости
 # Collections
 ## Иерархия
+>
 - Iterable
   - Collection
     - List - упорядоченная последовательность элементов, позволяющая хранить дубликаты и null. Каждый элемент имеет индекс.
@@ -20,7 +21,15 @@
         - Stack
     - Queue
     - Set
+>
 - Map
+  - HashMap
+    - LinkedHashMap
+  - SortedMap
+    - NavigableMap
+      - TreeMap
+  - HashTable
+
 ### ArrayList
 - ArrayList - способен изменять свою длину
 - ArrayList <DataType> list = new ArrayList <DataType>();
@@ -91,8 +100,21 @@
 - pop()
 - peek()
 - isEmpty()
-
-
+#### HashMap
+- Элементы - пары ключ\значение
+- методы очень быстро работают
+- не помнить порядок добавления элем.
+- ключи должны быть уникальными
+- можно добавлять null
+- putIfAbsent() - добавь если отсутствует
+- put() == add()
+- get()
+- remove()
+- containsValue("значение, а не ключ") ----> boolean
+- containsKey() ---------------------------> boolean
+- keySet() --------------------------------> Set[]
+- values() --------------------------------> Array[]
+- entrySet() ------------------------------>
 
 # Spring
 ## Inversion of Control:
