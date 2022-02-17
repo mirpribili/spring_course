@@ -76,7 +76,7 @@
 - O(n) - линейный
 - O(1) - самый быстрый
 - O(logN) - лучше чем O(n)
-### Vector (older)
+### Vector (ancient)
 - не synchronized класс, устаревший и непригодный для многопоточности.
 - в основе массив Object
 - add()
@@ -84,6 +84,13 @@
 - remove()
 - firstElement()
 - lastElement()
+#### Stack (ancient)
+- не synchronized класс, устаревший и непригодный для многопоточности.
+- использует принцип LIFO. (Last in, first out)
+- push()
+- pop()
+- peek()
+- isEmpty()
 
 
 
