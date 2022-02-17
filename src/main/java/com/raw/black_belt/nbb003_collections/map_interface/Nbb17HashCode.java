@@ -21,11 +21,22 @@ public class Nbb17HashCode {
 
         Student student5 = new Student("Red", "Earl", 1);
 
+        System.out.println("----------------------------------");
         System.out.println(studentMap.containsKey(student5));
+        student5.setCourse(5);
+        System.out.println(studentMap.containsKey(student5));
+        // ОГО из-за дефолтного hashCode изменение курса приводит к потере из индекса объекта!
+        System.out.println("----------------------------------");
+
 
         for(Map.Entry<Student, Double> entry: studentMap.entrySet()){
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+
+        Map<Integer, String> map = new HashMap<>(16,0.8f);
+
+
+
     }
 }
 class Student{
@@ -36,6 +47,14 @@ class Student{
     public Student(String name, String surname, int course) {
         this.name = name;
         this.surname = surname;
+        this.course = course;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public void setCourse(int course) {
         this.course = course;
     }
 
