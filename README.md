@@ -19,7 +19,12 @@
       - LinkedList
       - Vector
         - Stack
-    - Queue
+    - Queue (очередь)
+      - Deque
+        - LinkedList
+        - ArrayDeque
+      - AbstractQueue
+        - PriorityQueue
     - Set
       - HashSet
         - LinkedHashSet
@@ -193,7 +198,22 @@
 - производительность ниже родителя
 - не может хранить порядок вызова
 - add(), remove()
-
+## Queue (principal FIFO) BUT it is not synchronized
+  - Queue (очередь)
+    - Deque
+      - LinkedList
+      - ArrayDeque
+    - AbstractQueue
+      - PriorityQueue
+#### LinkedList
+      > имплементирует не только интерфейс List но и Deque
+- add() в конец очереди
+- add() **выбросит исключение** при добавлении в ограниченную очередь переполняющего элемента
+- offer() - **не выбросит исключения** для ограниченной очереди, но и не добавит
+- remove() - **выбросит исключение** возвращает последний элемент и удаляет
+  - может удалить из середины очереди
+- poll() - **не выбросит исключение** тоже что remove
+- peek() - **не выбросит исключение** **не удаляет**
 #
 > .
 > .
