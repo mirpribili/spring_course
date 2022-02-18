@@ -21,6 +21,11 @@
         - Stack
     - Queue
     - Set
+      - HashSet
+        - LinkedHashSet
+      - SortedSet
+        - NavigableSet
+          - TreeSet
 >
 - Map
   - HashMap
@@ -145,7 +150,35 @@
 - Плюс: хранит информацию о порядке добавления
 - Минус: производительность методов ниже чем HashMap
 - accessOrder - параметр в конструктор, позволяет порядок элементов менять обращением к элементам(прочитал = поместил в конец)
-
+#### HashTable
+- устаревший класс, теже принципы что и в HashMap
+- но synchronized --> поэтому медленнее работают методы
+- ни ключ ни значение не могут быть null
+## Set
+- Set
+  - HashSet
+    - LinkedHashSet
+  - SortedSet
+    - NavigableSet
+      - TreeSet
+### Set and HashSet - не synchronized
+      > Set - коллекция, хранящая уникуальные элементы.
+- методы коллекц. Set  - очень быстры
+- set это урезанная map
+#### HashSet
+- не запоминает порядок добавления
+- в основе HashSet - HashMap (где ключ - элементы HashSet, а значения константа заглушка)
+- add()
+- remove()
+- size()
+- isEmpty()
+- contains() bool = содержит ли
+- NOT EXIST get(key)
+> тк Set это множество то можно их логически вычитать, объединять итд
+- addAll() = объединение
+- retainAll() = intersect - пересечение
+- removeAll() = subtract - вычитание множеств
+#
 > .
 > .
 > .
