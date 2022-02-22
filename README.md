@@ -219,6 +219,22 @@
 - или натуральная сортировка
 - или та что описана с помощью Comparable или Comparator
 - **println()** может НЕ показать упорядочность!!
+#### Deque and ArrayDeque
+- Deque   = double ended queue
+- можно 2 правила применять благо двунаправленности. FIFO and LIFO
+- интерфейс Deque реализуется классами LinkedList и ArrayDeque
+- addFirst()
+- addLast()
+- offerFirst()
+- offerLast()
+- removeFirst()
+- removeLast()
+- pollFirst()
+- pollLast()
+- getFirst() - throw exeption
+- getLast()
+- peekFirst()
+- peekLast()
 - 
 
 #
