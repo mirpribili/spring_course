@@ -235,7 +235,27 @@
 - getLast()
 - peekFirst()
 - peekLast()
-- 
+# Nested Classes влож.
+# 4 type of classes
+> static, inner, local, anonymous.
+> 
+> как правило nested классы имеют доступ к полям out class даже private
+#
+    public class Nbb26NestedClasses {
+      static class MyStaticNestedClass{
+        //
+      }
+      class InnerClass{}
+      void method(){
+        class LocalClass{}
+      }
+      // and anonymous class
+      
+        // 4 type of classes
+    }
+- static nested class (SNC) ведет себя как обычный внешний класс
+- создавая SNC нужно указывать и содержащий его класс
+- может содержать статичные и не статичные элементы(наприм. счетчик двигателей для класса двигатель)
 
 #
 > .
