@@ -253,10 +253,18 @@
       
         // 4 type of classes
     }
+## StaticClass
 - static nested class (SNC) ведет себя как обычный внешний класс
 - создавая SNC нужно указывать и содержащий его класс
 - может содержать статичные и не статичные элементы(наприм. счетчик двигателей для класса двигатель)
-
+## InnerClass
+    this.engine = this.new Engine(horsePower);
+    Nbb28InnerClassCar.Engine engine = car.new Engine(100);
+    Nbb28InnerClassCar.Engine engine2 =
+      new Nbb28InnerClassCar("yellow", 4).new Engine(1);
+- если хотите создать объект внутреннего класса вам нужно сначала создать объект внешнего класса
+- может содержать только non-static элементы кроме final
+- внешний класс может обратиться к private элементам inner'a если сначала создаст его объект
 #
 > .
 > .
