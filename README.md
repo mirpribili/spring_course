@@ -276,6 +276,36 @@
 - может обратиться к private внешнего
 - Lambda expressions - это краткая форма для написания анонимных классов
 - анонимных интерфейсов не существует
+# Lambda Expression
+- попробуем отфильтровать массив студентов
+- Польза 1: чтобы воспользоваться интерфейсом (например для фильтрации) особенно ОДИН раз 
+  - то можно не создавать отдельный класс, а сделать анонимный и забыть 
+#
+    interface StudentChecks{  // -  функциональный интерфейс
+    // для лямбды тут должен быть 1  абстрактный метод!!!!
+    boolean check(Student student);
+    }
+    // ДАВАЙТЕ ЗАМЕНИМ ЭТОТ _ КЛАС АНОНИМНЫМ!! ТОГДА НЕ НАДО БУДЕТ ПЛОДИТЬ ЕГО РЕАЛИЗАЦИИ
+    class CheckOverGrade implements StudentChecks{
+        @Override
+        public boolean check(Student student) {
+            return student.avgGrade > 8;
+        }
+    }
+    // ГОТОВ
+    studentInfo.testStudents(students, (Student s) -> {return s.age < 20;});
+    //--------------------------------------
+    public class Nbb33LambdaExampleTwo {
+      public static void main(String[] args) {
+          def((String s) -> {return s.length();});
+      }
+        static void def(I i){
+            System.out.println(i.abc("Hi"));
+        }
+      }
+      interface  I{
+        int abc(String s);
+      }
 #
 > .
 > .
