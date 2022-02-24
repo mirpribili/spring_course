@@ -3,6 +3,7 @@ package com.raw.black_belt.nbb005_lambda;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class Nbb34LambdaPart2 {
     public static void main(String[] args) {
@@ -19,10 +20,14 @@ public class Nbb34LambdaPart2 {
         students.add(student4);
         students.add(student5);
 
-        Nbb32LambdaExpressionExample studentInfo = new Nbb32LambdaExpressionExample();
+        Nbb34LambdaPart2 studentInfo = new Nbb34LambdaPart2();
         System.out.println("- - - - - - - - - - - - - ");
+
+        Nbb31LambdaExpression studentInfo2 = new Nbb31LambdaExpression();
+
         StudentChecks studentChecks = (Student s) -> {return s.age < 20 && s.avgGrade < 9  && s.sex == 'f';};
-        studentInfo.testStudents(students, studentChecks);
+        studentInfo2.testStudents(students, studentChecks);
+
         System.out.println("- - - - - - - - - - - - - ");
         studentInfo.testStudents(students, s -> s.age < 20 && s.course == 1);
         System.out.println("- - - - - - - - - - - - - ");
@@ -34,7 +39,13 @@ public class Nbb34LambdaPart2 {
         });
         Collections.sort(students, (s1, s2) -> s1.course-s2.course);
 
-
+    }
+    void testStudents(ArrayList<Student> students1, Predicate<Student> studentPredicate){
+        for (Student s: students1){
+            if(studentPredicate.test(s)){
+                System.out.println(s);
+            }
+        }
     }
 }
 

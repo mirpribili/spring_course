@@ -317,7 +317,14 @@
 - def( (String x)-> x.length() );
 - def( (x,y)->x.length() );
 - def( (String x, String y)->x.length() );
-- 
+## java.util.function
+### Predicate<T> from java.util.function
+- функциональный интерфейс сразу заложен в Predicate 
+  - и его абстрактный метод test()
+- and()
+- or()
+- negate()
+
 > .
 > .
 > .
