@@ -326,7 +326,9 @@
 - negate()
 ### Supplier<T>
 - T get();
-
+### Consumer
+- void accept(T t)
+- void forEach()
 
 > .
 > .
