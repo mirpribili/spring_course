@@ -324,6 +324,9 @@
 - and()
 - or()
 - negate()
+### Supplier<T>
+- T get();
+
 
 > .
 > .
