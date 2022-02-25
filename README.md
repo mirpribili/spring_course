@@ -329,6 +329,21 @@
 ### Consumer
 - void accept(T t)
 - void forEach()
+### Function <T, R> 
+- // задача вернуть среднее арифметическое по произвольным полям студентов
+- R apply(T t);
+#
+      Function<Student, Double> function = student -> student.avgGrade;
+      
+    double result = avgOfSmth(students, function);
+    
+    private static double avgOfSmth(List<Student> list, Function<Student, Double> function){
+      double result = 0;
+      for (Student student: list){
+        result+=function.apply(student);
+      }
+      return result/list.size();
+    }
 
 > .
 > .
