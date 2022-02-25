@@ -355,11 +355,13 @@
 - .filter() (i)
 - .forEach() (t) [void]
 - .reduce() (t) {wrap to optional}.get() \ optional.isPresent()
-#
+####
     int result =  list.stream().reduce(
             (accumulator, element) -> accumulator * element
             ).get();
-
+- .sorted() (i)
+### chaining in stream
+- 
 #
 > .
 > .
