@@ -353,6 +353,7 @@
 - .map() (i)
 - .collect(Collectors.toList());
 - .filter() (i)
+- .forEach() (t) [void]
 
 
 #
