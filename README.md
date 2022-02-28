@@ -360,11 +360,14 @@
             (accumulator, element) -> accumulator * element
             ).get();
 - .sorted() (i)
+- concat() (static)
+- 
 ### chaining in stream
 - Source(напр. коллекции, массив) 
   - -> intermediate methods(lazy) [принимают поток и возвращают поток + не стартуют без терминального]
     - -> Terminal method (eager - не терпеливый)
-- 
+### concat()
+
 #
 > .
 > ....................................................................
