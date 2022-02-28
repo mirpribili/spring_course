@@ -372,7 +372,11 @@
 - .min() .max() (t)
 - .limit() (i)
 - .skip() (i) отличается от limit тем что не оставляет N элем., а ПРОПУСКАЕТ n элементов
-- 
+- .mapToInt() (i)
+  - .sum()
+  - .average() == opion double .getAsDouble()
+  - .min().getAsInt()
+- .boxed() for convert IntStream to Stream<Integer>
 ### chaining in stream
 - Source(напр. коллекции, массив) 
   - -> intermediate methods(lazy) [принимают поток и возвращают поток + не стартуют без терминального]
