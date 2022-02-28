@@ -360,15 +360,18 @@
             (accumulator, element) -> accumulator * element
             ).get();
 - .sorted() (i)
-- concat() (static)
-- distinct() (i) исп-я equals  уникальные выделяет
-- count() (t) long returned
-- peek() (i) аля println на каждом этапе или (i) версия forEach()
-- flatMap() (i) для матрешек? Ж-) смог выбрать из мас факультетов выбрать потоками студентов с кажд. фак. и всех вывести.
-- collect() (t)
-  - groupingBy() можно например сгруппировать студентов в листы по курсу, где ключ это курс)
-  - partitioningBy() - разгруппировать по
-  - 
+- .concat() (static)
+- .distinct() (i) исп-я equals  уникальные выделяет
+- .count() (t) long returned
+- .peek() (i) аля println на каждом этапе или (i) версия forEach()
+- .flatMap() (i) для матрешек? Ж-) смог выбрать из мас факультетов выбрать потоками студентов с кажд. фак. и всех вывести.
+- .collect() (t)
+  - .groupingBy() можно например сгруппировать студентов в листы по курсу, где ключ это курс)
+  - .partitioningBy() - разгруппировать по
+- .findFirst() (t)
+- .min() .max() (t)
+- .limit() (i)
+- .skip() (i) отличается от limit тем что не оставляет N элем., а ПРОПУСКАЕТ n элементов
 - 
 ### chaining in stream
 - Source(напр. коллекции, массив) 
