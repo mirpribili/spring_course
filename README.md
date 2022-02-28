@@ -361,6 +361,10 @@
             ).get();
 - .sorted() (i)
 - concat() (static)
+- distinct() (i) исп-я equals  уникальные выделяет
+- count() (t) long returned
+- peek() (i) аля println на каждом этапе или (i) версия forEach()
+- flatMap() (i)
 - 
 ### chaining in stream
 - Source(напр. коллекции, массив) 
