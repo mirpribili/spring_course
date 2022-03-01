@@ -388,6 +388,23 @@
 - Stream<T> s = Stream.of(...);
   - s.parallel(). ...
 - у stream's много противников, наущают порядок
+# Multithreading
+- Основная цель не скорость, а Concurrency
+## Варианты создания
+- class MyThread2 extends Thread{  public void run(){...}}
+  - MyThread2 myThread2 = new MyThread2();
+  - myThread2.start();
+- class MyThread3 implements Runnable{ public void run(){...}}
+  - Thread myThread3 = new Thread(new MyThread3());
+  - myThread3.start();
+- new Thread(new Runnable() {
+  - @Override
+  - public void run() {
+  - ...
+  - }
+  - }).start();
+- new Thread(()-> System.out.println()).start();
+
 #
 > .
 > ....................................................................
