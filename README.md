@@ -443,7 +443,19 @@
 - static final Object lock = new Object();
   - public void abc(){ ... synchronized(lock) {target block} ... }
 # Конструктор гарантированно обрабатывается только 1 потоком
-  
+## wait() and notify()
+- методы для извещения потоков
+  - wait(n) - **освобождает** монитор и переводит вызывающий поток в "ожидание" до вызова notify() другим
+  - notify() - **НЕ освобождает** монитор и будит поток в "ожидании" после wait()
+    - notifyAll() - **+** будет все потоки
+### wait() НЕЛЬЗЯ помещать в IF только в WHILE тк есть шанс что поток сам проснется
+    for:  
+      synchronized (lock){ lock.notify() and lock.wait()}
+    for:
+    public synchronized void getBread(){
+      while (breadCount<1){
+        try {
+          wait();
 # 
 #
 #
