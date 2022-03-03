@@ -461,6 +461,14 @@
 - LiveLocl - тоже что deadLock только потоки не ожидают, а работают(один пишет в файл а второй сразу стирает и появляется цикл)
 - LockStarvation - при малом приоритете "голодный" поток никогда не получит окно работы
 
+# Lock and ReentrantLock
+- Lock - интерфейс который имплементируется классом ReentrantLock
+- так же ка ключевое слово synchronized помогает синхронизации потоков
+- private Lock lock = new ReentrantLock();
+  - lock.lock();
+  - lock.unlock();
+  - tryLock()
+
 #
 #
 #
