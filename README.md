@@ -482,8 +482,15 @@
   - sleep(100);
     - } catch (InterruptedException e) {
   - e.printStackTrace();
-
-
+## Thread pool and ExecutorService
+- Thread pool - это множество потоков, каждый для своей задачи.
+  - работаем с ними с помощью ExecutorService
+- Thread pool создают с помощью factory методы класса Executors
+- Executors.newFixedThreadPool(int count); - для pool с N потоками
+- Executors.newSingleThreadExecutor(); - pool  с 1 потоком
+  - .shutdown() - ExecutorService понимает что новых заданий не будет и завершает работу.
+  - executors **.execute**(new RunnableImpExecutors()); передает новое задание thread pool
+  - .awaitTermination(5, TimeUnit.SECONDS); - like as join();
 #
 #
 #
