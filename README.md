@@ -474,8 +474,9 @@
   - если нет пользователя, то и обслуживать некого
 - setDaemon()
 - isDaemon()
-
-
+## Interruption
+- .stop(); [OLD]
+- .interrupt(); [norm]
 #
 #
 #
