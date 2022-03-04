@@ -491,7 +491,19 @@
   - .shutdown() - ExecutorService понимает что новых заданий не будет и завершает работу.
   - executors **.execute**(new RunnableImpExecutors()); передает новое задание thread pool
   - .awaitTermination(5, TimeUnit.SECONDS); - like as join();
-#
+## ScheduledExecutorService
+  - нужен для расписания на запуск потоков из пула
+  - вариант создания = Executors.newScheduledThreadPool(5);
+  - Между методами schedule() и scheduleAtFixedRate() 
+    - есть небольшая разница, которая заключается в разном 
+    - поведении, которое зависит от стартовой точки запуска. 
+    - Так второй метод работает как 
+    - startTime + iterationNumber * delayTime и помнит время запуска.
+    - 
+    - А обычный метод schedule() помнит последнее время выполнения
+    - и работает по формуле lastExecutionTime + delayTime.
+  - scheduleWithFixedDelay() = позволит обеспечить паузу между задачами - тк дождется завершения, чтобы вставить паузу.
+  - newCachedThreadPool - создает по мере надобности и может завершать не успевших за отведеннео время
 #
 #
 > .
