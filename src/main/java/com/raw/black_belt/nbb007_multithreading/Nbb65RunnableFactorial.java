@@ -1,8 +1,6 @@
 package com.raw.black_belt.nbb007_multithreading;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Nbb65RunnableFactorial {
     static int factorialResult;
@@ -11,6 +9,13 @@ public class Nbb65RunnableFactorial {
                 Executors.newSingleThreadExecutor();
         Factorial factorial = new Factorial(5);
         executorService.execute(factorial);
+        Future future = executorService.submit(factorial);
+        try {
+            System.out.println(future.get()); // null
+            System.out.println(future.isDone());
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
         executorService.shutdown();
         // ->_ like join
         executorService.awaitTermination(10, TimeUnit.SECONDS);

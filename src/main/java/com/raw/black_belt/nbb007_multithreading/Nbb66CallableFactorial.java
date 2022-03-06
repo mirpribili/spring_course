@@ -3,7 +3,7 @@ package com.raw.black_belt.nbb007_multithreading;
 import java.util.concurrent.*;
 
 public class Nbb66CallableFactorial {
-    static int factorialResalt;
+    static int factorialResult;
 
     public static void main(String[] args) {
         ExecutorService executorService =
@@ -11,6 +11,7 @@ public class Nbb66CallableFactorial {
         FactorialWithCallable factorial = new FactorialWithCallable(5);
         Future<Integer> future = executorService.submit(factorial);
         try {
+            System.out.println(future.isDone());
             System.out.println(future.get());
         } catch (InterruptedException e) {
             e.printStackTrace();
