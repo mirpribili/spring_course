@@ -576,18 +576,33 @@
 - это обертки
   - BufferedWriter writer = new BufferedWriter(new FileWriter("file.txt"))
   - BufferedReader reader = new BufferedReader(new FileReader("file.txt"))
-# FileInputStream & FileOutputStream 
+## FileInputStream & FileOutputStream 
 - для бинарных файлов
-# DataInputStream & DataOutputStream
+## DataInputStream & DataOutputStream
 - позволяет записывать и читать из файла примитивные типы данных
 - порядок чтения и записи важен!
-# Serialization
+## Serialization
 - для сериализации классов нужно имплементировать Serializable
 - поля помеченные как transient не будут сериализироваться
 - serialVersionUID - рекомендуется явно определять в классах
+## RandomAccessFile
+- позволяет читать и записывать в любом месте файла
+- .file.seek() - выбираем произвольный участок файла
+- .getFilePointer()
+- file.seek(file.length()-1); - конец файла
 
-#
-#
+
+##
+##
+##
+##
+##
+##
+##
+##
+##
+##
+
 > .
 > ....................................................................
 > ....................................................................
