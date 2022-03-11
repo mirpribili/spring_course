@@ -571,7 +571,14 @@
 ## FileReader и  FileWriter - для тестовых файлов
 ### FileReader
 - new FileReader("resources/Nbb77FileWrite.txt");
+### Try with resources
+### BufferedReader & BufferedWriter
+- это обертки
+  - BufferedWriter writer = new BufferedWriter(new FileWriter("file.txt"))
+  - BufferedReader reader = new BufferedReader(new FileReader("file.txt"))
 
+#
+#
 > .
 > ....................................................................
 > ....................................................................
