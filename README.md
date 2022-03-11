@@ -578,6 +578,9 @@
   - BufferedReader reader = new BufferedReader(new FileReader("file.txt"))
 # FileInputStream & FileOutputStream 
 - для бинарных файлов
+# DataInputStream & DataOutputStream
+- позволяет записывать и читать из файла примитивные типы данных
+- порядок чтения и записи важен!
 
 #
 #
