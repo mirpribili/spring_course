@@ -576,6 +576,8 @@
 - это обертки
   - BufferedWriter writer = new BufferedWriter(new FileWriter("file.txt"))
   - BufferedReader reader = new BufferedReader(new FileReader("file.txt"))
+# FileInputStream & FileOutputStream 
+- для бинарных файлов
 
 #
 #
