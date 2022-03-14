@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.StandardCharsets;
 
 public class Nbb84ChannelBufferExample1 {
     public static void main(String[] args) {
@@ -27,6 +28,17 @@ public class Nbb84ChannelBufferExample1 {
             }
             System.out.println(stringBuilder);
 
+            String text = "\n Some text about something\n I love you!";
+
+            // WRITE
+            ByteBuffer byteBufferWrite = ByteBuffer.allocate(text.getBytes().length);
+            byteBufferWrite.put(text.getBytes());
+            byteBufferWrite.flip();
+//            channel.write(byteBufferWrite);
+            // Write method 2
+            ByteBuffer byteBufferW2 = ByteBuffer.wrap(text.getBytes());
+            channel.write(byteBufferW2);
+            
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

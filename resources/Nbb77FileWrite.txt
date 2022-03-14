@@ -8,3 +8,6 @@
 Мало текста и нет ни смысла не формы.
 Можем мы увидеть смысл по крупице его в тексте?! Agent Smit
 			Agent Smith
+
+ Some text about something
+ I love you!
