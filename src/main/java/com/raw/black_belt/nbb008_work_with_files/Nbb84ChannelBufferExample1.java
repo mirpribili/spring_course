@@ -38,7 +38,7 @@ public class Nbb84ChannelBufferExample1 {
             // Write method 2
             ByteBuffer byteBufferW2 = ByteBuffer.wrap(text.getBytes());
             channel.write(byteBufferW2);
-            
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
