@@ -590,7 +590,22 @@
 - .file.seek() - выбираем произвольный участок файла
 - .getFilePointer()
 - file.seek(file.length()-1); - конец файла
-
+## class File
+- управляет **файлами** и деректориями
+### methods class File:
+    file.getAbsolutePath();
+    file.isAbsolute(); - путь абсолютный или нет
+    file.isDirectory();
+    file.exists();
+    file.createNewFile();
+    file.mkdir();
+    file.length();
+    file.delete();
+    file.listFiles();
+    file.isHidden();
+    file.canRead();
+    file.canWrite();
+    file.canExecute(); - право на запуск
 
 ##
 ##
