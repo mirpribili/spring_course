@@ -618,7 +618,12 @@
   - .compact() повзволяет работать с кусочком свободного места буфера
   - .rewind() - сброс на нулевую ячейку
   - mark() and reset() - один помечает второй перепрыгивает туда
-##
+## Interface Path & class Files
+   - Обновка java 7 улучшенная версия класса File
+   - объект типа Path представляет собой путь к файлу или директории
+     - Path path = Paths.get("txt.txt");
+   - isExecutable() вправе ли запускать
+   - copy and delete only for 1 thing. Cannot delete fulled folder
   
 ##
 ##
