@@ -21,7 +21,6 @@ public class Nbb87PathAndFilesCopyWrite {
         for (String s: list){
             System.out.println(s);
         }
-        Files.d
         System.out.println("Done");
     }
 }

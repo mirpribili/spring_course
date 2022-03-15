@@ -624,8 +624,22 @@
      - Path path = Paths.get("txt.txt");
    - isExecutable() вправе ли запускать
    - copy and delete only for 1 thing. Cannot delete fulled folder
-  
-##
+## Files.walkFileTree
+   - обход по дереву файлов например для копирования и удаления.
+   - Files.walkFileTree(Path start, FileVisitor visitor) - метод для обхода
+   - логику обхода реализует класс имплементирующий FileVisitor
+   - методы для определения:
+     - **preVisitDirectory** - срабатывает перед обращением к элементам папки
+     - **visitFile** - срабатывает при обращении к файлу.
+     - **postVisitDirectory** - сраб. после обращения ко всем элем. папки.
+     - **visitFileFailed** - сраб. когда файл недоступен.
+       - FileVisitResult
+         - CONTINUE - продолжить обход по файлам
+         - TERMINATE - немедленно прекратить обход
+         - SKIP_SUBTREE - в данную дир. не надо заходить
+         - SKIP_SIBLINGS - (родной брат или сестра) в данной дир. не нужно продолжать обход.
+         - 
+   - 
 ##
 ##
 ##
