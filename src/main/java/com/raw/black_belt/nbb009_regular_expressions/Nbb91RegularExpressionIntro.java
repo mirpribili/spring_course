@@ -55,5 +55,10 @@ public class Nbb91RegularExpressionIntro {
         while (matcher5.find()){
             System.out.println(matcher5.group(1));
         }
+        System.out.println("------------------------------");
+        System.out.printf("%-1s \t %08.1f", "Javelin", 3.1415);
+        System.out.println("\n------------------------------");
+        String result2 = String.format("%-1s \t %08.1f", "Javelin", 3.1415);
+        System.out.println(result2);
     }
 }

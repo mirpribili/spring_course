@@ -657,6 +657,19 @@
    - public String[] split(String regex)
    - .replaceAll()
    - .group()
+     - .printf()
+     - .format()
+     - %[flags][width][.precision]datatype_specifier
+     - flags:
+       - "-" выравнивание по левому
+       - "0" добавление нулей перед числом
+       - "." разделитель разрядов в числах
+     - DT specifiers
+       - "b" boolean
+       - "c" character
+       - "s" string
+       - "d" decimal целый
+       - "f" float
 ##
 ##
 ##
