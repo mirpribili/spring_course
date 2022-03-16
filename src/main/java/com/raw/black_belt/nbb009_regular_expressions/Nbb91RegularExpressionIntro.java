@@ -38,5 +38,22 @@ public class Nbb91RegularExpressionIntro {
 
         String[] array = s1.split(" ");
         System.out.println(Arrays.toString(array));
+
+        System.out.println("------------------------------");
+        s1 = s1.replace("Ivanov", "Javeline8");
+        s1 = s1.replaceAll("Javeline[0-9]", "Ivanov");
+        System.out.println(s1);
+        System.out.println("------------------------------");
+        String s4 = "123456789123456789";
+        Pattern pattern4 = Pattern.compile("(\\d{3})(\\d{3})(\\d{3})");
+        Matcher matcher4 = pattern4.matcher(s4);
+        String myNewString = matcher4.replaceAll("$3 $2 $1");
+        System.out.println(myNewString);
+
+        Matcher matcher5 = pattern4.matcher(s4);
+
+        while (matcher5.find()){
+            System.out.println(matcher5.group(1));
+        }
     }
 }

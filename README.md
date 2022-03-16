@@ -655,7 +655,8 @@
    - для коротких не нагружающих сравнений
    - public boolean matches (String regex)
    - public String[] split(String regex)
-   - 
+   - .replaceAll()
+   - .group()
 ##
 ##
 ##
