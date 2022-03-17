@@ -677,7 +677,8 @@
  - часто используется 
    - valueOf()
    - values()
-
+# Scanner
+   - scanner.nextLine(); for String
 
 ##
 ##
