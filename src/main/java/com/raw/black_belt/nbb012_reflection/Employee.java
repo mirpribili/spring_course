@@ -5,6 +5,7 @@ public class Employee {
     public String name;
     public String department;
     private double salary;
+    private double graySalary = 1000;
 
     public Employee(){}
 
